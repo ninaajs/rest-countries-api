@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Rest Countries API</title>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <nav class="nav">
+                <h1 class="nav__title">Where in the world?</h1>
+                <button class="btn"><i class="far fa-moon"></i> Dark mode</button>
+            </nav>
+        </div>
+    </header>
+    <main id="mainContainer" class="wrapper">
+        <!--country details-->
+    </main>
+    <template id="templateCountry">
+        <a class="btn btn--primary" href="./index.html"><i class="fas fa-arrow-left"></i>Back</a>
+        <div class="details">
+            <div class="details__image">
+                <img src="${flag}" alt="">
+            </div>
+            <div class="details__text">
+                <h2 class="details__name">${name}</h2>
+                <div class="details__info">
+                    <div class="details__col">
+                        <p class="details__data">
+                            <span class="bold">Native name:</span> 
+                            <span class="details__nativename">${nativeName}</span>
+                        </p>
+                        <p class="details__data">
+                            <span class="bold">Population:</span> 
+                            <span class="details__population">${population}</span>
+                        </p>
+                        <p class="details__data">
+                            <span class="bold">Region:</span> 
+                            <span class="details__region">${region}</span>   
+                        </p>
+                        <p class="details__data">
+                            <span class="bold">Subregion:</span> 
+                            <span class="details__subregion">${subregion}</span>   
+                        </p>
+                        <p class="details__data">
+                            <span class="bold">Capital:</span> 
+                            <span class="details__capital">${capital}</span>   
+                        </p>
+                    </div>
+                    <div class="details__col">
+                        <p class="details__data">
+                            <span class="bold">Top level domain:</span> 
+                            <span class="details__domain">${nativeName}</span>
+                        </p>
+                        <p class="details__data">
+                            <span class="bold">Concurrencies:</span> 
+                            <span class="details__concurrencies">${concurrencies}</span>
+                        </p>
+                        <p class="details__data">
+                            <span class="bold">Languages:</span> 
+                            <span class="details__languages"></span>
+                        </p>
+                    </div>
+                   
+                </div>
+                <div class="details__borderctries">
+                    
+                </div>
+            </div>
+        
+        </div>
+    </template>
+    <script src="details.js" type="module" defer></script>
+</body>
+</html>

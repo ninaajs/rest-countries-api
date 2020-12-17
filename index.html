@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Rest Countries API</title>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <nav class="nav">
+                <h1 class="nav__title">Where in the world?</h1>
+                <button class="btn"><i class="far fa-moon"></i> Dark mode</button>
+            </nav>
+        </div>
+    </header>
+    <main class="wrapper">
+        <div class="actions">
+            <form id="form" class="form form--search">
+                <div class="input-group">
+                    <input  id="countrySearchInput"
+                    type="search" 
+                    placeholder="Search for a country"
+                    class="input">
+                    <i class="fas fa-search"></i>
+                </div>
+            </form>
+            <div class="custom-select">
+                <select id="countryFilter" name="">
+                    <option value="">Filter by Region</option>
+                    <option value="africa">Africa</option>
+                    <option value="americas">America</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </div>
+            
+        </div>
+        <section id="countriesCountainer" class="countries">
+            <!--Countries-->
+        </section>
+    </main>
+    <template id="templateCountry">
+        <article class="country">
+            <div class="country__img">
+                <a href=""><img src="${flag}" alt=""></a>   
+            </div>
+            
+            <div class="country__body">
+                <h2 class="country__name">${name}</h2>
+            <p class="country__data">
+                <span class="bold">Population:</span> 
+                <span class="country__population">${population}</span>
+            </p>
+            <p class="country__data">
+                <span class="bold">Region:</span> 
+                <span class="country__region">${region}</span>
+            </p>
+            <p class="country__data">
+                <span class="bold">Capital:</span> 
+                <span class="country__capital">${capital}</span>   
+            </p>
+            </div>
+        </article>
+    </template>
+    <script src="app.js" type="module" defer></script>
+</body>
+</html>
